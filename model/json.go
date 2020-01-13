@@ -16,10 +16,11 @@ type Item struct {
 	Video        video       `json:"video"`
 	IsAds        bool        `json:"is_ads"`
 	Duration     int         `json:"duration"`
-	GroupId      string         `json:"group_id"`
-	AuthorUserId int         `json:"author_user_id"`
+	GroupId      string      `json:"group_id"`
+	AuthorUserId int64       `json:"author_user_id"`
 	LongVideo    []longVideo `json:"long_video"`
 	Statistics   statistics  `json:"statistics"`
+	ShareInfo    shareInfo   `json:"share_info"`
 }
 
 type author struct {
@@ -57,4 +58,9 @@ type statistics struct {
 	ForwardCount      int    `json:"forward_count"`
 	LoseCount         int    `json:"lose_count"`
 	LoseComment_count int    `json:"lose_comment_count"`
+}
+
+type shareInfo struct {
+	ShareUrl   string `json:"share_url"`
+	ShareTitle string `json:"share_title"`
 }

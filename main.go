@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/cnbattle/douyin/apps/adb"
-	"github.com/cnbattle/douyin/apps/web"
+	"github.com/cnbattle/douyin/internal/recommend"
+	"github.com/cnbattle/douyin/internal/web"
 )
 
 func main() {
-	go web.Run()
-	go adb.Run()
+	go web.Start()
+	go recommend.Start()
 	select {}
 }
